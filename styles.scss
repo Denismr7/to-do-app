@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap');
+//Color Palette
+$white: #f9f9f9;
+$lightblue: #c3edea;
+$yellow: #f6d743;
+$green: #21bf73;
+$black: #333333;
+
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    background: linear-gradient(#035aa6, #40bad5) no-repeat;
+    font-family: 'Raleway', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#body__title {
+    color: $white;
+    font-size: 3rem;
+}
+#form__input, #form__button {
+    border: none;
+}
+form {
+    display: flex;
+    flex-direction: row;
+}
+#form__input {
+    width: 40rem;
+    height: 3.5rem;
+    font-size: 1.75rem;
+    padding-left: 0.75rem;
+    color: lighten($color: $black, $amount: 10);
+    background-color: $white;
+}
+#form__button {
+    width: 3.6rem;
+    height: 3.6rem;
+    background: none;
+    background-color: $white;
+    font-size: 2rem;
+    color: darken($color: $yellow, $amount: 3);
+    transition: all 0.2s ease;
+    &:hover {
+        color: darken($color: $yellow, $amount: 20);
+        cursor: pointer;
+    }
+}

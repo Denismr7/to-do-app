@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap");
+html {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background: -webkit-gradient(linear, left top, left bottom, from(#035aa6), to(#40bad5)) no-repeat;
+  background: linear-gradient(#035aa6, #40bad5) no-repeat;
+  font-family: 'Raleway', sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#body__title {
+  color: #f9f9f9;
+  font-size: 3rem;
+}
+
+#form__input, #form__button {
+  border: none;
+}
+
+form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+#form__input {
+  width: 40rem;
+  height: 3.5rem;
+  font-size: 1.75rem;
+  padding-left: 0.75rem;
+  color: #4d4d4d;
+  background-color: #f9f9f9;
+}
+
+#form__button {
+  width: 3.6rem;
+  height: 3.6rem;
+  background: none;
+  background-color: #f9f9f9;
+  font-size: 2rem;
+  color: #f5d434;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+#form__button:hover {
+  color: #c9a80a;
+  cursor: pointer;
+}
+/*# sourceMappingURL=styles.css.map */
