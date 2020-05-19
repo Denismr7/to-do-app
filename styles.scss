@@ -65,7 +65,20 @@ form {
         text-decoration: line-through;
         }
     }
-    transition: all 0.5s ease;
+    .deleted {
+        @keyframes removeItem {
+            0% {
+                position: relative;
+                opacity: 1;
+            }
+            100% {
+                transform: translateX(30rem) rotateY(180deg);
+                opacity: 0;
+            }
+        }
+        animation-name: removeItem;
+        animation: removeItem 1s ease forwards;
+    }
     .todosContainer__item {
         display: flex;
         flex-direction: row;
