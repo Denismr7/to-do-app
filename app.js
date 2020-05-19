@@ -17,6 +17,9 @@ function newTodo() {
     // Get the input value
     const inputValue = input.value;
 
+    if (inputValue === "") {
+        alert("The task is empty")
+    } else {
     // Create HTML items
     const newTodo = document.createElement("article");
     newTodo.classList.add("todosContainer__item");
@@ -37,6 +40,7 @@ function newTodo() {
     deleteButton = document.querySelectorAll(".fa-trash");
     checkButton.forEach(button => button.addEventListener("click", completedTodo));
     deleteButton.forEach(button => button.addEventListener("click", deleteTodo));
+    }
 };
 
 function completedTodo() {
@@ -47,7 +51,7 @@ function completedTodo() {
 function deleteTodo() {
     const article = event.target.parentElement.parentElement;
     article.classList.add("deleted");
-    article.addEventListener("transitionend", function() {
+    article.addEventListener("animationend", function() {
         article.remove();
     });
 }
