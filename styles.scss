@@ -64,6 +64,7 @@ form {
         .todosContainer__item__title {
         text-decoration: line-through;
         }
+        transition: all 0.5s ease;
     }
     .deleted {
         @keyframes removeItem {
@@ -72,7 +73,7 @@ form {
                 opacity: 1;
             }
             100% {
-                transform: translateX(30rem) rotateY(180deg);
+                transform: translateX(20rem) rotateY(180deg);
                 opacity: 0;
             }
         }

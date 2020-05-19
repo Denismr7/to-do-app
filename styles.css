@@ -87,6 +87,8 @@ form {
 
 #todosContainer .completed {
   opacity: 0.5;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 #todosContainer .completed .todosContainer__item__title {
@@ -109,6 +111,7 @@ form {
     -webkit-transform: translateX(30rem) rotateY(180deg);
             transform: translateX(30rem) rotateY(180deg);
     opacity: 0;
+    display: none;
   }
 }
 
@@ -121,6 +124,7 @@ form {
     -webkit-transform: translateX(30rem) rotateY(180deg);
             transform: translateX(30rem) rotateY(180deg);
     opacity: 0;
+    display: none;
   }
 }
 
