@@ -1,12 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap');
 //Color Palette
 $white: #f9f9f9;
-$lightblue: #c3edea;
+$purple: #5c2a9d;
 $yellow: #f6d743;
 $green: #21bf73;
 $black: #333333;
+$red: #d63447;
 
-html {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -17,7 +18,7 @@ body {
     font-family: 'Raleway', sans-serif;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
 }
 #body__title {
@@ -32,8 +33,8 @@ form {
     flex-direction: row;
 }
 #form__input {
-    width: 40rem;
-    height: 3.5rem;
+    width: 40vw;
+    height: 6vh;
     font-size: 1.75rem;
     padding-left: 0.75rem;
     color: lighten($color: $black, $amount: 10);
@@ -41,7 +42,7 @@ form {
 }
 #form__button {
     width: 3.6rem;
-    height: 3.6rem;
+    height: 6vh;
     background: none;
     background-color: $white;
     font-size: 2rem;
@@ -50,5 +51,69 @@ form {
     &:hover {
         color: darken($color: $yellow, $amount: 20);
         cursor: pointer;
+    }
+}
+#todosContainer {
+    width: 100%;
+    min-height: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .completed {
+        opacity: 0.5;
+        .todosContainer__item__title {
+        text-decoration: line-through;
+        }
+    }
+    transition: all 0.5s ease;
+    .todosContainer__item {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 0.60%;
+        background-color: $purple;
+        color: $white;
+        min-width: 25%;
+        min-height: 10%;
+        @media screen and (max-width: 1049px) {
+            min-width: 40%;
+        }
+        @media screen and (max-width: 445px) {
+            min-width: 80%;
+        }
+        h3 {
+            padding-left: 1%;
+        }
+        .buttons {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+            background-color: saddlebrown;
+            width: 25%;
+            height: 100%;
+            .fa-check, .fa-trash {
+                width: 50%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: all 0.3s ease;
+                cursor: pointer;
+            }
+            .fa-check {
+                background-color: $green;
+                &:hover {
+                    background-color: darken($color: $green, $amount: 10);
+                }
+            }
+            .fa-trash {
+                background-color: $red;
+                &:hover {
+                    background-color: darken($color: $red, $amount: 10);
+                }
+            }
+        }
     }
 }

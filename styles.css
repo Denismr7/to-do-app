@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap");
-html {
+* {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
@@ -18,9 +18,9 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -46,8 +46,8 @@ form {
 }
 
 #form__input {
-  width: 40rem;
-  height: 3.5rem;
+  width: 40vw;
+  height: 6vh;
   font-size: 1.75rem;
   padding-left: 0.75rem;
   color: #4d4d4d;
@@ -56,7 +56,7 @@ form {
 
 #form__button {
   width: 3.6rem;
-  height: 3.6rem;
+  height: 6vh;
   background: none;
   background-color: #f9f9f9;
   font-size: 2rem;
@@ -68,5 +68,119 @@ form {
 #form__button:hover {
   color: #c9a80a;
   cursor: pointer;
+}
+
+#todosContainer {
+  width: 100%;
+  min-height: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+#todosContainer .completed {
+  opacity: 0.5;
+}
+
+#todosContainer .completed .todosContainer__item__title {
+  text-decoration: line-through;
+}
+
+#todosContainer .todosContainer__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 0.60%;
+  background-color: #5c2a9d;
+  color: #f9f9f9;
+  min-width: 25%;
+  min-height: 10%;
+}
+
+@media screen and (max-width: 1049px) {
+  #todosContainer .todosContainer__item {
+    min-width: 40%;
+  }
+}
+
+@media screen and (max-width: 445px) {
+  #todosContainer .todosContainer__item {
+    min-width: 80%;
+  }
+}
+
+#todosContainer .todosContainer__item h3 {
+  padding-left: 1%;
+}
+
+#todosContainer .todosContainer__item .buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: saddlebrown;
+  width: 25%;
+  height: 100%;
+}
+
+#todosContainer .todosContainer__item .buttons .fa-check, #todosContainer .todosContainer__item .buttons .fa-trash {
+  width: 50%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+#todosContainer .todosContainer__item .buttons .fa-check {
+  background-color: #21bf73;
+}
+
+#todosContainer .todosContainer__item .buttons .fa-check:hover {
+  background-color: #199459;
+}
+
+#todosContainer .todosContainer__item .buttons .fa-trash {
+  background-color: #d63447;
+}
+
+#todosContainer .todosContainer__item .buttons .fa-trash:hover {
+  background-color: #b32435;
 }
 /*# sourceMappingURL=styles.css.map */
