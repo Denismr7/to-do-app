@@ -4,12 +4,15 @@ const addTodoBtn = document.getElementById("form__button");
 const todosContainer = document.getElementById("todosContainer");
 let checkButton = document.querySelectorAll(".fa-check");
 let deleteButton = document.querySelectorAll(".fa-trash");
+const saveBtn = document.getElementById("form__save");
+const successSaveBtn = document.getElementById("form__success");
+const todosArray = localStorage.getItem("todos") ? JSON.parse(localStorage.getItem("todos")) : [];
 
 // EventListeners
 addTodoBtn.addEventListener("click", newTodo);
 checkButton.forEach(button => button.addEventListener("click", completedTodo));
 deleteButton.forEach(button => button.addEventListener("click", deleteTodo));
-
+saveBtn.addEventListener("click", saveToLocal)
 
 // Functions
 function newTodo() {
@@ -35,11 +38,12 @@ function newTodo() {
     newTodo.appendChild(divBtn);
     todosContainer.appendChild(newTodo);
 
-    // Update info
+    // Update info and clear the form
     checkButton = document.querySelectorAll(".fa-check");
     deleteButton = document.querySelectorAll(".fa-trash");
     checkButton.forEach(button => button.addEventListener("click", completedTodo));
     deleteButton.forEach(button => button.addEventListener("click", deleteTodo));
+    input.value = "";
     }
 };
 
@@ -54,4 +58,12 @@ function deleteTodo() {
     article.addEventListener("animationend", function() {
         article.remove();
     });
+}
+
+function saveToLocal() {
+    // Shows a message to the user
+    successSaveBtn.textContent = "Saved successfully!"
+    setTimeout(() => {
+        successSaveBtn.textContent = "";
+    }, 3000);
 }

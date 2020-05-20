@@ -53,6 +53,31 @@ form {
         cursor: pointer;
     }
 }
+#form__save {
+    width: 3.6rem;
+    height: 6vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $green;
+    margin-left: 1rem;
+    cursor: pointer;
+    font-size: 2rem;
+    color: $white;
+    transition: all 0.2s ease;
+    &:hover {
+        background-color: darken($color: $green, $amount: 10);
+    }
+}
+#form__success {
+    width: auto;
+    height: 6vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $green;
+    margin-left: 1rem;
+}
 #todosContainer {
     width: 100%;
     min-height: 60%;
@@ -78,7 +103,7 @@ form {
             }
         }
         animation-name: removeItem;
-        animation: removeItem 3s ease forwards;
+        animation: removeItem 1s ease forwards;
     }
     .todosContainer__item {
         display: flex;
